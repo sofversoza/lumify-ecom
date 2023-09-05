@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "collections",
+  "info": {
+    "singularName": "collection",
+    "pluralName": "collections",
+    "displayName": "collection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "isNew": {
+      "type": "boolean",
+      "default": false
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "audios",
+        "videos"
+      ]
+    },
+    "designer": {
+      "type": "string"
+    },
+    "lamps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lamp.lamp",
+      "mappedBy": "collection"
+    }
+  }
+}
