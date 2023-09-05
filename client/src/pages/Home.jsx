@@ -1,7 +1,11 @@
-import React from 'react';
+import React from "react"
+import useFetch from "../hooks/useFetch.jsx"
 
 const Home = () => {
-  return <div>Home</div>;
-};
+	const { data } = useFetch("/lamps?populate=*")
+	console.log(data)
 
-export default Home;
+	return <div>Home</div>
+}
+
+export default Home
