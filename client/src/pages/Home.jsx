@@ -6,7 +6,12 @@ const Home = () => {
 	const { data } = useFetch("/lamps?populate=*")
 	console.log(data)
 
-	return <div>Home</div>
+	return (
+		<div>
+			<h1></h1>
+			Home
+		</div>
+	)
 }
 
 export default Home
