@@ -3,24 +3,27 @@ import { request } from "../request"
 
 const useFetch = (url) => {
 	const [data, setData] = useState(null)
-	const [isLoading, setIsLoading] = useState(false)
 	const [error, setError] = useState(null)
+	const [loading, setLoading] = useState(false)
 
 	useEffect(() => {
 		const fetchData = async () => {
-			setIsLoading(true)
+			setLoading(true)
+
 			try {
 				const res = await request.get(url)
 				setData(res.data.data)
+				// console.log(res)
 			} catch (error) {
 				setError(error)
 			}
-			setIsLoading(false)
+			setLoading(false)
 		}
+
 		fetchData()
 	}, [url])
 
-	return { data, isLoading, error }
+	return { data, loading, error }
 }
 
 export default useFetch

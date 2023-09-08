@@ -27,6 +27,7 @@
   --fs-heading: var(--fs-600);
 }
 
+/* css reset */
 *,
 *::before,
 *::after {
@@ -60,6 +61,7 @@ body {
   font-family: var(--ff-body);
   font-weight: var(--fw-semi-bold);
   font-size: var(--fs-body);
+  background-color: antiquewhite;
 }
 
 /* A elements that don't have a class get default styles */
@@ -73,3 +75,13 @@ img {
 }
 
 /* Utility classes */
+
+.header {
+  background-color: green;
+  display: flex;
+  justify-content: space-between;
+}
+
+#navbar a.active {
+  color: red;
+}
