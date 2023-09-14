@@ -1,8 +1,7 @@
 import React from "react"
 import { useParams } from "react-router-dom"
 import useFetch from "../hooks/useFetch.jsx"
-import "../styles/productDetails.css"
-import { useState } from "react"
+import "../styles/product.css"
 import RecursiveForDetails from "../components/RecursiveForDetails.jsx"
 
 const ProductDetails = () => {
@@ -15,14 +14,15 @@ const ProductDetails = () => {
 
 	return (
 		<div className="product-details">
-			{/* {Object.keys(data).map((key) => {
+			<span>Product Details</span>
+			{Object.keys(data).map((key) => {
 				return (
 					<div key={key}>
 						<span>{data[key].name}</span>
 					</div>
 				)
-			})} */}
-			<span>{id}</span>
+			})}
+			<span>Lamp id: {id}</span>
 			<RecursiveForDetails data={data} />
 		</div>
 	)

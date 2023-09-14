@@ -13,7 +13,7 @@ const Card = ({ data }) => {
 							className="card-img"
 							src={`http://localhost:1337${lamp.attributes.image1.data.attributes.url}`}
 						/>
-						<span>{lamp.attributes.name}</span>
+						<span style={{ color: "white" }}>{lamp.attributes.name}</span>
 					</div>
 				</Link>
 			))}

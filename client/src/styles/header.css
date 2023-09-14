@@ -1,0 +1,12 @@
+#header {
+  background-color: var(--clr-accent-warm);
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--clr-light);
+}
+
+#navbar a.active {
+  color: rgb(156, 77, 77);
+}

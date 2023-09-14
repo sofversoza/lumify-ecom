@@ -1,11 +1,14 @@
 :root {
   --clr-primary: ;
+  --clr-secondary: #8D9C9D;
 
-  --clr-accent-light: ;
-  --clr-accent-dark: ;
+  --clr-accent-cool: #B5BCD0;
+  --clr-accent-neutral: #C5CFB4;
+  --clr-accent-warm: #362D26;
 
-  --clr-neutral-light: ;
-  --clr-neutral-dark: ;
+  --clr-light: #EDE9DC;
+  --clr-dark200: #8D8D8F;
+  --clr-dark500: #3A3A3C;
 
   --ff-primary: 'Poppins', sans-serif;
   --ff-body: var(--ff-primary);
@@ -62,7 +65,7 @@ body {
   font-family: var(--ff-body);
   font-weight: var(--fw-semi-bold);
   font-size: var(--fs-body);
-  background-color: antiquewhite;
+  background-color: var(--clr-bg);
 }
 
 /* A elements that don't have a class get default styles */
@@ -81,13 +84,6 @@ img {
 }
 
 /* Utility classes */
-
-.header {
-  background-color: green;
-  display: flex;
-  justify-content: space-between;
-}
-
-#navbar a.active {
-  color: red;
+.align-all {
+  padding: 0 3%;
 }

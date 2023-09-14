@@ -1,7 +1,12 @@
-import React from 'react';
+import React from "react"
+import "../styles/footer.css"
 
 const Footer = () => {
-  return <div>Footer</div>;
-};
+	return (
+		<footer className="align-all">
+			<span>Footer</span>
+		</footer>
+	)
+}
 
-export default Footer;
+export default Footer

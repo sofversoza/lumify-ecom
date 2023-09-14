@@ -14,7 +14,7 @@ import Footer from "./components/Footer"
 //layout
 const Layout = () => {
 	return (
-		<div>
+		<div className="main-layout">
 			<Header />
 			<Outlet />
 			<Footer />
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
 		element: <Layout />,
 		children: [
 			{ path: "/", element: <Home /> },
-			{ path: "/products/:id", element: <Products /> },
+			{ path: "/products/:id", element: <Products /> }, // categories & collections?
 			{ path: "/product/:id", element: <ProductDetails /> },
 			{ path: "/search", element: <Search /> },
 		],

@@ -1,13 +1,14 @@
 import React from "react"
 import { Link, NavLink } from "react-router-dom"
 import useFetch from "../hooks/useFetch"
+import "../styles/header.css"
 
 const Header = () => {
 	const { data } = useFetch("/categories?populate=*")
 	// console.log(data)
 
 	return (
-		<div className="header">
+		<div id="header" className="align-all">
 			<Link to="/">
 				<h1>Lumify</h1>
 			</Link>

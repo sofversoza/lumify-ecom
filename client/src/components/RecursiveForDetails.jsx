@@ -1,26 +1,28 @@
 import React from "react"
+import "../styles/product.css"
 
 const RecursiveForDetails = ({ data }) => {
-	if (!data) {
-		return null
-	}
+	if (!data) return null
 
 	const { id, attributes } = data
+	const baseURL = "http://localhost:1337"
 
 	return (
-		<div>
+		<div className="product-recursive">
 			<h1>{attributes.name}</h1>
 			<p>Price: {attributes.price}</p>
 			<p>On Sale: {attributes.onSale ? "Yes" : "No"}</p>
 			<p>Created At: {attributes.createdAt}</p>
 
-			{/* Render image if available */}
-			{attributes.image1 && (
-				<img
-					src={attributes.image1.data.url}
-					alt={attributes.image1.data.alternativeText}
-				/>
-			)}
+			{/* Render image(s) if available */}
+			<div className="thumbnail">
+				{attributes.image1 && (
+					<img
+						src={baseURL + attributes.image1.data.attributes.url}
+						alt={attributes.image1.data.attributes.alternativeText}
+					/>
+				)}
+			</div>
 
 			{/* Render categories if available */}
 			{attributes.categories && attributes.categories.data.length > 0 && (

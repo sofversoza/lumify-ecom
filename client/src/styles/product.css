@@ -1,0 +1,21 @@
+/* RecursiveForDetails */
+.product-recursive {
+  background-color: white;
+}
+
+.product-recursive .thumbnail {
+  width: 320px;
+  height: auto;
+}
+
+/* ProductDetails */
+.product-details {
+  height: 100vh;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  /* overflow: hidden; */
+
+  background-color: var(--clr-accent-cool);
+}

@@ -1,0 +1,4 @@
+.homepage {
+  background-color: var(--clr-accent-neutral);
+  min-height: calc(100vh - 10vh);
+}
