@@ -1,7 +1,24 @@
 .card {
-  width: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #fff;
+  align-items: center;
 }
 
-.card img {
+.card-container {
+  width: 180px;
+  position: relative;
+  padding: 2%;
+}
+
+.card-container img {
   object-fit: cover;
+}
+
+.card span {
+  position: absolute;
+  bottom: 2%;
+  right: 5%;
+  font-size: var(--fs-200);
 }

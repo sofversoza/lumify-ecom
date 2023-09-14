@@ -4,7 +4,6 @@ import Card from "../components/Card.jsx"
 
 const Home = () => {
 	const { data } = useFetch("/lamps?populate=*")
-	// console.log(data)
 
 	return (
 		<div>
